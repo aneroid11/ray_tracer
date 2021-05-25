@@ -10,7 +10,7 @@ const float ZERO_SUBSTITUTE = 0.001;
 const int NUM_SPHERE_OBJECTS = 4;
 const int NUM_HORIZONTAL_PLANES = 2;
 const int NUM_VERTICAL_PLANES_PERP_X = 2;
-const int NUM_LIGHTS = 1;
+const int NUM_LIGHTS = 2;
 const vec3 CAM_POS = vec3(0.0, 0.0, 0.0);
 const float DIFFUSE_LIGHT = 0.2;
 
@@ -97,7 +97,10 @@ void init_vertical_planes_perp_x() {
 
 void init_lights() {
 	lights[0].position = vec3(0.0f, 0.0f, 10.0f);
-	lights[0].intensity = (1 - DIFFUSE_LIGHT) / NUM_LIGHTS - 0.1;
+	lights[0].intensity = (1 - DIFFUSE_LIGHT) / NUM_LIGHTS;
+	
+	lights[1].position = vec3(0.0f, 0.0f, 20.0f);
+	lights[1].intensity = (1 - DIFFUSE_LIGHT) / NUM_LIGHTS;
 }
 
 bool ray_intersects_sphere(vec3 r0, vec3 r1, sphere_object s, out float t, out vec3 normal_dir) {

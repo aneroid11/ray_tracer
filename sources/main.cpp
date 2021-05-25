@@ -1,6 +1,3 @@
-//https://habr.com/ru/post/533932/
-
-
 #include <cstdio>
 #include <cstdbool>
 #include <cstdlib>
