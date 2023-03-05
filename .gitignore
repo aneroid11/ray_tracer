@@ -1,0 +1,4 @@
+.qmake*
+*.o
+ray_tracer
+Makefile
